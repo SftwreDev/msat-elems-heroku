@@ -50,7 +50,18 @@
                     <li class="list-group-item">
                       <a class="create-profile text-primary text-decoration-none" ><i class="fas fa-plus-circle"aria-hidden="false"></i>&nbspCreate your profile</a>
                     </li>
-                    
+                    {% if user.studentprofile %}
+                    <li class="list-group-item">
+                      <a class="update-profile text-primary text-decoration-none" data-id= "{% url 'profile:student-update-profile' user.studentprofile.pk %}" ><i class="fas fa-edit"aria-hidden="false"></i>&nbspUpdate your profile</a>
+
+
+                    </li>
+                    <li class="list-group-item">
+                      <a class="delete-profile text-primary text-decoration-none" data-id="{% url 'profile:student_profile_delete' user.studentprofile.pk %}"><i class="fas fa-trash-alt"aria-hidden="false"></i>&nbspDelete  your profile</a>
+
+
+                    </li>
+                    {% endif %}
                   </ul>
                 </div>
 
