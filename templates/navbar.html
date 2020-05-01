@@ -51,8 +51,12 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           {% if user.is_student %}
+              {% if user.studentprofile %}
             <p class="text-muted dropdown-item" >Welcome, <br> {{ user.studentprofile.last_name }}, <br>
             {{ user.studentprofile.first_name }} {{ user.studentprofile.middle_name }}</p>
+            {% else %}
+            <p class="text-muted dropdown-item" >Welcome, {{ user.username }}</p>
+            {% endif %}
          <div class="dropdown-divider"></div>
        <a class="dropdown-item" href="{% url 'logout' %}"><i class="fa fa-sign-out-alt" aria-hidden="false"></i>&nbsp Log Out</a>
 
