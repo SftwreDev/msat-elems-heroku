@@ -26,7 +26,7 @@
 
             <div class="card-header">
                 <h5 class="card-title"><img src="{% static 'icons/user-icon.png' %}" style="width: 20px; margin-right: 5px; margin-bottom: 4px;">{{ user.studentprofile.last_name }},
-                     {{user.studentprofile.first_name }} {{ user.studentprofile.middle_name }}<a class='updateprofile text-primary' data-id="{% url 'profile:student-update-profile' user.studentprofile.pk %}" style="font-size: 13px; margin-bottom: 16px; margin-left: 2px"><i class="fas fa-pen" aria-hidden="false"></i>&nbsp</a>
+                     {{user.studentprofile.first_name }} {{ user.studentprofile.middle_name }}
                    </h5>
 
               <p class="text-muted text-center"><img src="{% static 'icons/email.png' %}" style="width: 20px; margin-right: 5px; margin-bottom: 3px;">{{ user.studentprofile.email }}</p>
