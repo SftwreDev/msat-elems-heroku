@@ -21,7 +21,7 @@
     <h5 class="font-weight-bold"><i class="fas fa-thumbtack text-primary" aria-hidden = 'false'></i>&nbsp{{ announcements.title }}</h5>
     <p>Year Level : <strong>{{ announcements.year_level }}</strong></p>
     <hr>
-    <p class='text-authenticity' >{{ announcements.content }}</p>
+    <p class='text-authenticity' >{{ announcements.content|linebreaks }}</p>
 
 </div>
 
